@@ -112,3 +112,16 @@
         Piercing: 20
         Structural: 70
     armorPenetration: 0.6
+
+- type: entity
+  id: Bullet45_magnumGODkiller
+  parent: BaseBullet
+  name: bullet (.45 magnum GOD killer)
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 1000
+        Structural: 70
+    armorPenetration: 1
