@@ -87,6 +87,17 @@ public sealed class SpaceCleanupSystem : BaseCleanupSystem<PhysicsComponent>
 
         var price = 0f;
 
+        var priceFactor = 1f;
+
+            if (_maxPrice > 0f)
+{
+         var safePrice = MathF.Max(price, 0f);
+         priceFactor = MathF.Sqrt(safePrice / _maxPrice);
+}
+
+var playerRadius = MathF.Max(0.1f, _maxDistance * aggression * priceFactor);
+var gridRadius = MathF.Max(0.1f, _maxGridDistance * aggression * priceFactor);
+
         return !_gridQuery.HasComp(uid)
             && (xform.ParentUid == xform.MapUid // don't delete if on grid
                 || (isStuck |= GetWallStuck((uid, xform)))) // or wall-stuck
@@ -95,8 +106,8 @@ public sealed class SpaceCleanupSystem : BaseCleanupSystem<PhysicsComponent>
             && !_mindQuery.HasComp(uid) // no deleting anything that can have a mind - should be handled by MobCleanupSystem anyway
             && (price = (float)_pricing.GetPrice(uid)) <= _maxPrice
             && (isStuck
-                || !_cleanup.HasNearbyGrids(xform.Coordinates, _maxGridDistance * aggression * MathF.Sqrt(price / _maxPrice))
-                    && !_cleanup.HasNearbyPlayers(xform.Coordinates, _maxDistance * aggression * MathF.Sqrt(price / _maxPrice)));
+                || !_cleanup.HasNearbyGrids(xform.Coordinates, gridRadius)
+                    && !_cleanup.HasNearbyPlayers(xform.Coordinates, playerRadius));
     }
 
     private bool GetWallStuck(Entity<TransformComponent> ent)
@@ -141,7 +152,7 @@ public sealed class SpaceCleanupSystem : BaseCleanupSystem<PhysicsComponent>
             var xf = _physics.GetLocalPhysicsTransform(anch, xform);
             var shape = fix.Shape;
 
-            if ((bool?)_testOverlap.Invoke(_manifold, [shape, 0, shapeB, 0, xf, xfB]) ?? false)
+            if ((bool?)_testOverlap.Invoke(_manifold, new object[] { shape, 0, shapeB, 0, xf, xfB }) ?? false)
                 return true;
         }
 
@@ -179,3 +190,4 @@ public sealed class SpaceCleanupSystem : BaseCleanupSystem<PhysicsComponent>
         }
     }
 }
+

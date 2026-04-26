@@ -1,0 +1,200 @@
+# Vylnari Customization Markings
+# Based on Tajaran sprites from Goobstation
+
+# Vylnari Tails
+
+- type: marking
+  id: VylnariTailRetro
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vylnari]
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Tajaran/tails.rsi
+    state: tail
+
+- type: marking
+  id: VylnariTailAnim
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vylnari]
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Tajaran/tails.rsi
+    state: tail_anim
+
+- type: marking
+  id: VylnariTailRetroRings
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vylnari]
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Tajaran/tails.rsi
+    state: tail
+  - sprite: _Goobstation/Mobs/Customization/Tajaran/tail_markings.rsi
+    state: tail_rings
+
+- type: marking
+  id: VylnariTailAnimRings
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vylnari]
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Tajaran/tails.rsi
+    state: tail_anim
+  - sprite: _Goobstation/Mobs/Customization/Tajaran/tail_markings.rsi
+    state: tail_anim_rings
+
+# Vylnari Ears
+
+- type: marking
+  id: VylnariEarsBasic
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Vylnari]
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Tajaran/ears.rsi
+    state: ears
+
+- type: marking
+  id: VylnariEarsSeparate
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Vylnari]
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Tajaran/ears.rsi
+    state: outears
+  - sprite: _Goobstation/Mobs/Customization/Tajaran/ears.rsi
+    state: inears
+
+- type: marking
+  id: VylnariEarsRetroNear
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Vylnari]
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Tajaran/ears.rsi
+    state: ears_near
+
+- type: marking
+  id: VylnariEarsSeparateNear
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Vylnari]
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Tajaran/ears.rsi
+    state: outears_near
+  - sprite: _Goobstation/Mobs/Customization/Tajaran/ears.rsi
+    state: inears_near
+
+# Vylnari Head/Face
+
+- type: marking
+  id: VylnariHeadNose
+  bodyPart: Head
+  markingCategory: Snout
+  speciesRestriction: [Vylnari]
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Tajaran/head.rsi
+    state: nose
+
+- type: marking
+  id: VylnariHeadMuzzle
+  bodyPart: Head
+  markingCategory: Snout
+  speciesRestriction: [Vylnari]
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Tajaran/head.rsi
+    state: muzzle
+
+- type: marking
+  id: VylnariHeadMuzzleLarge
+  bodyPart: Head
+  markingCategory: Snout
+  speciesRestriction: [Vylnari]
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Tajaran/head.rsi
+    state: muzzle_large
+
+- type: marking
+  id: VylnariHeadPoints
+  bodyPart: Head
+  markingCategory: Snout
+  speciesRestriction: [Vylnari]
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Tajaran/head.rsi
+    state: points
+
+- type: marking
+  id: VylnariHeadTiger
+  bodyPart: Head
+  markingCategory: Snout
+  speciesRestriction: [Vylnari]
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Tajaran/head.rsi
+    state: tiger_face
+
+- type: marking
+  id: VylnariHeadTigerAlt
+  bodyPart: Head
+  markingCategory: Snout
+  speciesRestriction: [Vylnari]
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Tajaran/head.rsi
+    state: tiger_head
+
+- type: marking
+  id: VylnariHeadPatches
+  bodyPart: Head
+  markingCategory: Snout
+  speciesRestriction: [Vylnari]
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Tajaran/head.rsi
+    state: patch
+
+# Vylnari Torso
+
+- type: marking
+  id: VylnariTorsoBelly
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [Vylnari]
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Tajaran/torso.rsi
+    state: belly
+
+- type: marking
+  id: VylnariTorsoCrest
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [Vylnari]
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Tajaran/torso.rsi
+    state: crest
+
+- type: marking
+  id: VylnariTorsoFullBelly
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [Vylnari]
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Tajaran/torso.rsi
+    state: fullbelly
+
+# Vylnari Overlays
+
+- type: marking
+  id: VylnariOverlayPatch
+  bodyPart: LLeg
+  markingCategory: Overlay
+  speciesRestriction: [Vylnari]
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Tajaran/overlays.rsi
+    state: patch
+
+- type: marking
+  id: VylnariOverlayPoints
+  bodyPart: LLeg
+  markingCategory: Overlay
+  speciesRestriction: [Vylnari]
+  sprites:
+  - sprite: _Goobstation/Mobs/Customization/Tajaran/overlays.rsi
+    state: points

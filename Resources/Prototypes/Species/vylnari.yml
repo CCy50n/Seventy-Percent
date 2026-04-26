@@ -1,0 +1,150 @@
+- type: species
+  id: Vylnari
+  name: species-name-vylnari
+  roundStart: true
+  prototype: MobTajaran
+  dollPrototype: MobVylnariDummy
+  sprites: MobTajaranSprites
+  markingLimits: MobTajaranMarkingLimits
+  skinColoration: Hues
+  maleFirstNames: names_tajaran_first
+  femaleFirstNames: names_tajaran_first
+  lastNames: names_tajaran_last
+
+- type: markingPoints
+  id: MobVylnariMarkingLimits
+  points:
+    Hair:
+      points: 1
+      required: false
+    FacialHair:
+      points: 1
+      required: false
+    Tail:
+      points: 1
+      required: true
+      defaultMarkings: [ TajaranTailRetro ]
+    HeadTop:
+      points: 1
+      required: true
+      defaultMarkings: [ TajaranEarsBasic ]
+    Chest:
+      points: 1
+      required: false
+    Legs:
+      points: 2
+      required: false
+    Arms:
+      points: 2
+      required: false
+
+- type: speciesBaseSprites
+  id: MobVylnariSprites
+  sprites:
+    Head: MobTajaranHead
+    HeadTop: MobHumanoidAnyMarking
+    HeadSide: MobHumanoidAnyMarking
+    Hair: MobHumanoidAnyMarking
+    FacialHair: MobHumanoidAnyMarking
+    Snout: MobHumanoidAnyMarking
+    Chest: MobTajaranTorso
+    Eyes: MobTajaranEyes
+    LArm: MobTajaranLArm
+    RArm: MobTajaranRArm
+    LHand: MobTajaranLHand
+    RHand: MobTajaranRHand
+    LLeg: MobTajaranLLeg
+    RLeg: MobTajaranRLeg
+    Tail: MobHumanoidAnyMarking
+    LFoot: MobTajaranLFoot
+    RFoot: MobTajaranRFoot
+
+- type: humanoidBaseSprite
+  id: MobVylnariEyes
+  baseSprite:
+    sprite: Mobs/Customization/eyes.rsi
+    state: eyes
+
+- type: humanoidBaseSprite
+  id: MobVylnariHead
+  baseSprite:
+    sprite:  _Goobstation/Mobs/Species/Vylnari/parts.rsi
+    state: head_m
+
+- type: humanoidBaseSprite
+  id: MobVylnariHeadMale
+  baseSprite:
+    sprite:  _Goobstation/Mobs/Species/Tajaran/parts.rsi
+    state: head_m
+
+- type: humanoidBaseSprite
+  id: MobVylnariHeadFemale
+  baseSprite:
+    sprite: _Goobstation/Mobs/Species/Tajaran/parts.rsi
+    state: head_f
+
+- type: humanoidBaseSprite
+  id: MobVylnariTorso
+  baseSprite:
+    sprite: _Goobstation/Mobs/Species/Tajaran/parts.rsi
+    state: torso_m
+
+- type: humanoidBaseSprite
+  id: MobVylnariTorsoMale
+  baseSprite:
+    sprite:  _Goobstation/Mobs/Species/Tajaran/parts.rsi
+    state: torso_m
+
+- type: humanoidBaseSprite
+  id: MobVylnariTorsoFemale
+  baseSprite:
+    sprite: _Goobstation/Mobs/Species/Tajaran/parts.rsi
+    state: torso_f
+
+- type: humanoidBaseSprite
+  id: MobVylnariLLeg
+  baseSprite:
+    sprite:  _Goobstation/Mobs/Species/Tajaran/parts.rsi
+    state: l_leg
+
+- type: humanoidBaseSprite
+  id: MobVylnariLArm
+  baseSprite:
+    sprite: _Goobstation/Mobs/Species/Tajaran/parts.rsi
+    state: l_arm
+
+- type: humanoidBaseSprite
+  id: MobVylnariLHand
+  baseSprite:
+    sprite: _Goobstation/Mobs/Species/Tajaran/parts.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobVylnariLFoot
+  baseSprite:
+    sprite: _Goobstation/Mobs/Species/Tajaran/parts.rsi
+    state: l_foot
+
+- type: humanoidBaseSprite
+  id: MobVylnariRLeg
+  baseSprite:
+    sprite:  _Goobstation/Mobs/Species/Tajaran/parts.rsi
+    state: r_leg
+
+- type: humanoidBaseSprite
+  id: MobVylnariRArm
+  baseSprite:
+    sprite: _Goobstation/Mobs/Species/Tajaran/parts.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobVylnariRHand
+  baseSprite:
+    sprite: _Goobstation/Mobs/Species/Tajaran/parts.rsi
+    state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobVylnariRFoot
+  baseSprite:
+    sprite: _Goobstation/Mobs/Species/Tajaran/parts.rsi
+    state: r_foot
