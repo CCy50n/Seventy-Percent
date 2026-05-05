@@ -39,3 +39,45 @@
     - back
     - suitStorage # Frontier - Same as axe
 #mono edit end
+
+- type: entity
+  parent: BaseItem
+  id: WeaponRadiantMaulTheShock
+  name: heavy maul "The Shock"
+  description: A weapon of sadistic enjoyment.
+  components:
+  - type: Sprite
+    sprite: _Mono/Objects/Weapons/Melee/shockmaul.rsi
+    state: icon
+  - type: Item
+    size: Huge
+  - type: MeleeWeapon
+    attackRate: 2.0
+    range: 1.70
+    damage:
+      types:
+        Blunt: 15
+        Structural: 50
+    bluntStaminaDamageFactor: 3 # 30 stamina damage
+    wideAnimationRotation: 270
+  - type: Wieldable
+  - type: IncreaseDamageOnWield
+    damage:
+      types:
+        Blunt: 50
+        Shock: 15
+        Structural: 250 
+  - type: Defibrillator # "OH NO...*I* SAY WHEN I SAY WE'RE DONE"
+    zapHeal:
+       types:
+         Asphyxiation: -40
+         Blunt: -70
+  - type: DoAfter
+  - type: UseDelay
+  - type: Clothing
+    sprite: _Mono/Objects/Weapons/Melee/shockmaul.rsi
+    quickEquip: false
+    slots:
+    - back
+    - suitStorage # Frontier - Same as axe
+    - Belt

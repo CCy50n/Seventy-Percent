@@ -1,0 +1,81 @@
+- type: entity
+  parent: 
+  - BaseMobSpecies
+  - MobBloodstream
+  id: BaseMobGreatRadiant
+  name: Urist McRadiant
+  abstract: true
+  components:
+  - type: CombatMode
+    canDisarm: true
+  - type: MeleeWeapon
+    soundHit:
+      collection: Punch
+    angle: 30
+    animation: WeaponArcFist
+    attackRate: 20
+    damage:
+      types:
+        Piercing: 20
+        Blunt: 30
+        Structural: 20
+  - type: Damageable
+    damageContainer: GreatRadiantDamageContainer
+    damageModifierSet: GreatRadiantDamageModifierSet
+  - type: PassiveDamage # Slight passive regen. Assuming one damage type, comes out to about 4 damage a minute.
+    allowedStates:
+    - Alive
+    - Critical
+    damageCap: 1000
+    damage:
+      types:
+        Scourge: -0.1
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      500: Critical
+      2000: Dead
+  - type: Body
+    prototype: GreatRadiant
+    requiredLegs: 2
+  - type: Icon # It will not have an icon in the adminspawn menu without this. Body parts seem fine for whatever reason.
+    sprite: Mobs/Species/Human/parts.rsi
+    state: full
+  - type: Butcherable
+    butcheringType: Spike
+    spawned:
+    - id: FoodMeatHuman
+      amount: 20
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - TauCetiBasic
+    understands:
+    - TauCetiBasic
+  - type: HumanoidAppearance
+    species: GreatRadiant
+    hideLayersOnEquip:
+    - Hair
+    - Snout
+  - type: Inventory
+    femaleDisplacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Human/displacement.rsi
+            state: jumpsuit-female
+  - type: Carriable # Frontier: Carrying system from nyanotrasen.
+  - type: Speech # Frontier
+    allowedEmotes: ['Belch'] # Frontier
+
+- type: entity
+  parent: BaseSpeciesDummy
+  id: MobGreatRadiantDummy
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Inventory
+    femaleDisplacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Human/displacement.rsi
+            state: jumpsuit-female

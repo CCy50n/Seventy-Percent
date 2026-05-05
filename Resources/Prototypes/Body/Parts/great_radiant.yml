@@ -1,0 +1,127 @@
+# TODO: Add descriptions (many)
+# TODO BODY: Part damage
+- type: entity
+  id: PartGreatRadiant
+  parent: [BaseItem, BasePartIndestructable]
+  name: "great radiant body part"
+  abstract: true
+  components:
+  - type: Icon # Shitmed Change
+    sprite: Mobs/Species/Human/parts.rsi
+  - type: BodyPart # Shitmed Change
+    species: GreatRadiant
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 3
+      - ReagentId: Blood
+        Quantity: 10
+
+- type: entity
+  id: TorsoGreatRadiant
+  name: "great radiant torso"
+  parent: [PartGreatRadiant, BaseTorso]
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Human/parts.rsi
+    state: "torso_m"
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 10
+      - ReagentId: Blood
+        Quantity: 20
+
+- type: entity
+  id: HeadGreatRadiant
+  name: "great radiant head"
+  parent: [PartGreatRadiant, BaseHead]
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Human/parts.rsi
+    state: "head_m"
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 5
+      - ReagentId: Blood
+        Quantity: 10
+
+- type: entity
+  id: LeftArmGreatRadiant
+  name: "left great radiant arm"
+  parent: [PartGreatRadiant, BaseLeftArm]
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Human/parts.rsi
+    state: "l_arm"
+
+- type: entity
+  id: RightArmGreatRadiant
+  name: "right great radiant arm"
+  parent: [PartGreatRadiant, BaseRightArm]
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Human/parts.rsi
+    state: "r_arm"
+
+- type: entity
+  id: LeftHandGreatRadiant
+  name: "left great radiant hand"
+  parent: [PartGreatRadiant, BaseLeftHand]
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Human/parts.rsi
+    state: "l_hand"
+  - type: DoAfterDelayMultiplier # Goobstation
+    multiplier: 0.9
+
+- type: entity
+  id: RightHandGreatRadiant
+  name: "right great radiant hand"
+  parent: [PartGreatRadiant, BaseRightHand]
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Human/parts.rsi
+    state: "r_hand"
+  - type: DoAfterDelayMultiplier # Goobstation
+    multiplier: 0.9
+
+- type: entity
+  id: LeftLegGreatRadiant
+  name: "left great radiant leg"
+  parent: [PartGreatRadiant, BaseLeftLeg]
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Human/parts.rsi
+    state: "l_leg"
+
+- type: entity
+  id: RightLegGreatRadiant
+  name: "right great radiant leg"
+  parent: [PartGreatRadiant, BaseRightLeg]
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Human/parts.rsi
+    state: "r_leg"
+
+- type: entity
+  id: LeftFootGreatRadiant
+  name: "left great radiant foot"
+  parent: [PartGreatRadiant, BaseLeftFoot]
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Human/parts.rsi
+    state: "l_foot"
+
+- type: entity
+  id: RightFootGreatRadiant
+  name: "right great radiant foot"
+  parent: [PartGreatRadiant, BaseRightFoot]
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Human/parts.rsi
+    state: "r_foot"

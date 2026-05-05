@@ -74,6 +74,11 @@
   - Genetic
   - Metaphysical
 
+- type: damageContainer
+  id: GreatRadiantDamageContainer
+  supportedGroups:
+  - Genetic
+
 # Shitmed
 - type: damageContainer
   id: OrganicPart

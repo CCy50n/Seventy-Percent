@@ -1,0 +1,11 @@
+- type: species
+  id: GreatRadiant
+  name: species-name-great-radiant
+  roundStart: false
+  prototype: MobGreatRadiant
+  sprites: MobHumanSprites
+  markingLimits: MobHumanMarkingLimits
+  dollPrototype: MobGreatRadiantDummy
+  skinColoration: HumanToned
+
+# This species borrows most of its content from Humans, so please look there for anything missing (a lot)

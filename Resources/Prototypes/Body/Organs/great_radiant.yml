@@ -1,0 +1,17 @@
+- type: entity
+  id: OrganGreatRadiantHeart
+  parent: OrganHumanHeart
+  name: heart
+  description: "We everlasting gods… Ah what chilling blows we suffer, thanks to our own conflicting wills, whenever we show these mortal men some kindness."
+  components:
+  - type: Metabolizer
+    maxReagents: 100
+    metabolizerTypes: [GreatRadiant]
+    groups:
+    - id: Medicine
+    - id: Cryogenic # Frontier
+    - id: Poison
+    - id: Narcotic
+  - type: Item
+    size: Small
+    heldPrefix: heart

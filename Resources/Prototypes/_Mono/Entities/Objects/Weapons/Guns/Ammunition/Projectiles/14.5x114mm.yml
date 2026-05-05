@@ -18,3 +18,24 @@
   - type: Tracer
     color: "#FFFFFFFF"
     length: 3
+
+- type: entity
+  parent: Bullet145x114mm
+  id: Bullet145x114mmScourge
+  name: bullet (14.5x114mm Scourge)
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 200
+        Structural: 500
+        Scourge: 600
+    ignoreResistances: true # Goobstation
+    penetrationThreshold: 50000
+    penetrationDamageTypeRequirement:
+    - Structural
+  - type: StaminaDamageOnCollide
+    damage: 100
+  - type: Tracer
+    color: "#FFEE9E"
+    length: 10

@@ -1,0 +1,26 @@
+- type: reagent
+  id: Ambrosia
+  name: Ambrosia
+  group: Toxins
+  desc: "The only thing they fear."
+  physicalDesc: reagent-physical-desc-pungent
+  color: "#FFEFA6"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:HealthChange
+        conditions:
+        - !type:OrganType
+          type: GreatRadiant
+          shouldHave: false
+        damage:
+          types:
+            Scourge: 1
+      - !type:HealthChange
+        conditions:
+        - !type:OrganType
+          type: GreatRadiant
+          shouldHave: true
+        damage:
+          types:
+            Scourge: 100

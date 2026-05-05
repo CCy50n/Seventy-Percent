@@ -32,6 +32,28 @@
 
 - type: entity
   abstract: true
+  parent: BaseItem
+  id: BasePartIndestructable
+  name: "body part"
+  components:
+  - type: Icon
+    sprite: Mobs/Species/Human/parts.rsi
+  - type: BodyPart
+  - type: SurgeryTool # Shitmed Change
+    startSound:
+      path: /Audio/_Shitmed/Medical/Surgery/organ1.ogg
+    endSound:
+      path: /Audio/_Shitmed/Medical/Surgery/organ2.ogg
+  - type: ContainerContainer
+    containers:
+      bodypart: !type:Container
+        ents: []
+  - type: Tag
+    tags:
+    - Trash
+
+- type: entity
+  abstract: true
   id: BaseTorsoInorganic
   name: "torso"
   components:
@@ -75,6 +97,48 @@
     containers:
       torso_slot: !type:ContainerSlot {}
     # Shitmed Change End
+
+- type: entity
+  abstract: true
+  parent: BaseTorsoInorganic
+  id: BaseTorso
+  components:
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Blunt
+        damage: 400
+      behaviors:
+      - !type:GibPartBehavior { }
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Slash
+        damage: 400
+      behaviors:
+      - !type:GibPartBehavior { }
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Heat
+        damage: 400
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawnInContainer: true
+        spawn:
+          Ash:
+            min: 1
+            max: 1
+      - !type:BurnBodyBehavior { }
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MeatLaserImpact
+  - type: Extractable # torso is meatier
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 10
+      - ReagentId: Blood
+        Quantity: 20
 
 - type: entity
   abstract: true
@@ -129,6 +193,44 @@
       - !type:PlaySoundBehavior
         sound:
           collection: MeatLaserImpact
+
+- type: entity
+  abstract: true
+  parent: BaseTorsoInorganic
+  id: BaseTorsoIndestructable
+  components:
+  - type: Extractable # torso is meatier
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 10
+      - ReagentId: Blood
+        Quantity: 20
+
+- type: entity
+  abstract: true
+  id: BaseHeadIndestructable
+  name: "head"
+  components:
+  - type: Sprite
+    state: "head_m"
+  - type: Icon
+    state: "head_m"
+  - type: BodyPart
+    partType: Head
+    toolName: "a head" # Shitmed Change
+    vital: true
+    #severIntegrity: 400 # Mono
+    organs: # Shitmed Change
+      brain:
+        id: brain
+      eyes:
+        id: eyes
+  - type: Input
+    context: "ghost"
+  - type: Tag
+    tags:
+      - Head
 
 - type: entity
   abstract: true
